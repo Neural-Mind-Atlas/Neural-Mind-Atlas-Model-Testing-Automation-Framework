@@ -1,0 +1,22 @@
+{
+  "contexts": [
+    {
+      "id": "medium_context_1",
+      "title": "AI in Content Creation",
+      "content": "Artificial Intelligence is revolutionizing content creation across industries. Traditional content creation processes often involve multiple stakeholders, lengthy approval cycles, and significant resource allocation. With the integration of AI technologies, organizations are finding new ways to streamline these processes while maintaining or even improving quality.\n\nAI-powered tools can now generate first drafts of written content, create basic visual designs, and even compose simple music. These capabilities are particularly valuable in scenarios where large volumes of content need to be produced, such as product descriptions for e-commerce, daily news updates, or regular financial reports.\n\nThe most successful implementations of AI in content creation follow a human-in-the-loop approach, where AI handles routine aspects of content generation while human creators focus on refinement, creativity, and strategic decisions. This collaborative model has shown to increase productivity by 35-45% in various case studies.\n\nHowever, challenges remain. Quality control, brand consistency, and the creative 'spark' that defines truly exceptional content are areas where human oversight remains essential. Organizations must also navigate ethical considerations, including transparency about AI-generated content and potential impacts on creative professionals' employment.",
+      "metadata": {
+        "tokens": 1029,
+        "domain": "technology"
+      }
+    },
+    {
+      "id": "medium_context_2",
+      "title": "Presentation Best Practices",
+      "content": "Creating effective presentations requires a balance of content quality, visual design, and delivery strategy. Research indicates that audiences retain only about 10% of what they hear but remember 65% of information when paired with relevant images.\n\nStructure is fundamental to presentation success. The classic 'tell them what you're going to tell them, tell them, then tell them what you told them' approach provides a framework that aids audience comprehension. For complex presentations, the inverted pyramid method—starting with the key message and then providing supporting details—can be particularly effective.\n\nVisual elements should enhance, not distract from, the core message. Cognitive load theory suggests limiting text to 6-7 lines per slide and using consistent visual themes to reduce processing effort. Color psychology plays a significant role; blue conveys trust and stability, while orange suggests energy and creativity.\n\nData visualization deserves special attention in business and technical presentations. Edward Tufte's principle of 'data-ink ratio' recommends maximizing the ink dedicated to actual data while minimizing decorative elements. Bar charts work well for comparisons, line charts for trends over time, and scatter plots for showing relationships between variables.\n\nDelivery factors heavily influence audience engagement. Speaking at approximately 150-160 words per minute allows for comprehension while maintaining interest. Incorporating strategic pauses after key points gives audiences time to process information. Body language, accounting for 55% of communication impact according to the Mehrabian model, should project confidence through open posture and deliberate gestures.",
+      "metadata": {
+        "tokens": 1325,
+        "domain": "communication"
+      }
+    }
+  ]
+}

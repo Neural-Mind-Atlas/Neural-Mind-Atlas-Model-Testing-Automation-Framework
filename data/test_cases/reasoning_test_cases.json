@@ -1,0 +1,24 @@
+{
+  "test_cases": [
+    {
+      "id": "reasoning_logical_1",
+      "category": "logical_deduction",
+      "prompt_id": "logical_deduction_basic",
+      "variables": {
+        "premises": "Premise 1: All programmers at company X know Python.\nPremise 2: All team leads at company X are programmers.\nPremise 3: Jamie is a team lead at company X."
+      },
+      "expected_reasoning": "Since all team leads are programmers (Premise 2), and Jamie is a team lead (Premise 3), Jamie must be a programmer. Since all programmers know Python (Premise 1), and Jamie is a programmer, Jamie must know Python.",
+      "expected_conclusion": "Jamie knows Python."
+    },
+    {
+      "id": "reasoning_mathematical_1",
+      "category": "mathematical_problem_solving",
+      "prompt_id": "mathematical_problem",
+      "variables": {
+        "problem": "A company started with 200 employees. In the first year, the number of employees increased by 20%. In the second year, the number of employees decreased by 10%. How many employees does the company have after these two years?"
+      },
+      "expected_reasoning": "Start with 200 employees. After a 20% increase: 200 × 1.20 = 240 employees. After a 10% decrease: 240 × 0.90 = 216 employees.",
+      "expected_answer": 216
+    }
+  ]
+}

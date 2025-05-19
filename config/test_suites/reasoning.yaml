@@ -1,0 +1,51 @@
+# Reasoning Test Suite Configuration
+
+name: "Reasoning Capabilities"
+description: "Tests for logical, mathematical, and analogical reasoning"
+weight: 1.0
+
+test_cases:
+  - id: logical_deduction
+    name: "Logical Deduction"
+    description: "Tests ability to make logical deductions from given premises"
+    prompts_file: "data/prompts/reasoning/logical_deduction.yaml"
+    examples_count: 10
+    evaluation:
+      method: "accuracy"
+      metrics: ["correctness", "step_by_step"]
+    weight: 0.3
+
+  - id: mathematical_problem_solving
+    name: "Mathematical Problem Solving"
+    description: "Tests ability to solve mathematical problems"
+    prompts_file: "data/prompts/reasoning/mathematical.yaml"
+    examples_count: 10
+    evaluation:
+      method: "accuracy"
+      metrics: ["correctness", "step_by_step", "final_answer"]
+    weight: 0.3
+
+  - id: analogical_reasoning
+    name: "Analogical Reasoning"
+    description: "Tests ability to identify analogies and relationships"
+    prompts_file: "data/prompts/reasoning/analogical.yaml"
+    examples_count: 10
+    evaluation:
+      method: "accuracy"
+      metrics: ["correctness", "explanation_quality"]
+    weight: 0.2
+
+  - id: conditional_reasoning
+    name: "Conditional Reasoning"
+    description: "Tests ability to reason with if-then statements"
+    prompts_file: "data/prompts/reasoning/conditional.yaml"
+    examples_count: 10
+    evaluation:
+      method: "accuracy"
+      metrics: ["correctness", "completeness"]
+    weight: 0.2
+
+settings:
+  temperature: 0.1  # Lower temperature for reasoning tasks
+  max_tokens: 2048
+  evaluation_model: "gpt_4o"  # Model to use for evaluating responses

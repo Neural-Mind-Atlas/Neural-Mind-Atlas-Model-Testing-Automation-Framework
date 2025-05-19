@@ -1,0 +1,122 @@
+# Evaluation Metrics Configuration
+
+metrics:
+  # Accuracy Metrics
+  correctness:
+    description: "Factual correctness of the response"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Completely incorrect, 5: Completely correct
+    evaluation_method: "model_based"
+    weight: 1.0
+
+  completeness:
+    description: "Completeness of the response relative to required information"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Missing critical information, 5: Complete
+    evaluation_method: "model_based"
+    weight: 0.8
+
+  step_by_step:
+    description: "Quality of step-by-step reasoning"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: No steps, 5: Clear, logical steps
+    evaluation_method: "model_based"
+    weight: 0.7
+
+  # Hallucination Metrics
+  factual_accuracy:
+    description: "Absence of hallucinated facts"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Many hallucinations, 5: No hallucinations
+    evaluation_method: "model_based"
+    weight: 1.0
+
+  admission_of_uncertainty:
+    description: "Appropriately acknowledging uncertainty"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: False certainty, 5: Appropriate uncertainty
+    evaluation_method: "model_based"
+    weight: 0.8
+
+  # Instruction Following Metrics
+  compliance_rate:
+    description: "Percentage of instructions correctly followed"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: None followed, 5: All followed perfectly
+    evaluation_method: "model_based"
+    weight: 1.0
+
+  format_adherence:
+    description: "Adherence to requested output format"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Wrong format, 5: Perfect format match
+    evaluation_method: "model_based"
+    weight: 0.9
+
+  # Context Utilization Metrics
+  relevance:
+    description: "Relevance of response to the provided context"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Irrelevant, 5: Perfectly relevant
+    evaluation_method: "model_based"
+    weight: 1.0
+
+  synthesis:
+    description: "Ability to synthesize information from context"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: No synthesis, 5: Excellent synthesis
+    evaluation_method: "model_based"
+    weight: 0.9
+
+  # Creative Quality Metrics
+  coherence:
+    description: "Logical flow and cohesion of creative content"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Incoherent, 5: Perfectly coherent
+    evaluation_method: "model_based"
+    weight: 0.8
+
+  originality:
+    description: "Originality and uniqueness of content"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Derivative, 5: Highly original
+    evaluation_method: "model_based"
+    weight: 0.7
+
+  # PPT Quality Metrics
+  structure:
+    description: "Quality of slide structure and organization"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Poor structure, 5: Excellent structure
+    evaluation_method: "model_based"
+    weight: 1.0
+
+  clarity:
+    description: "Clarity and understandability of content"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Unclear, 5: Crystal clear
+    evaluation_method: "model_based"
+    weight: 1.0
+
+  conciseness:
+    description: "Appropriate brevity and information density"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Too verbose/sparse, 5: Perfect balance
+    evaluation_method: "model_based"
+    weight: 0.8
+
+  # Prompt Quality Metrics
+  specificity:
+    description: "Level of specific detail in prompts"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Vague, 5: Highly specific
+    evaluation_method: "model_based"
+    weight: 1.0
+
+  effectiveness:
+    description: "Likely effectiveness of the prompt for intended purpose"
+    scale: [0, 1, 2, 3, 4, 5]  # 0: Ineffective, 5: Highly effective
+    evaluation_method: "model_based"
+    weight: 1.0
+
+  # Efficiency Metrics
+  token_efficiency:
+    description: "Efficiency in token usage relative to quality"
+    calculation: "automatic"
+    weight: 0.8
+
+  response_time:
+    description: "Time taken to generate response"
+    calculation: "automatic"
+    weight: 0.6
+
+  # Cost Metrics
+  cost_per_quality:
+    description: "Cost relative to output quality"
+    calculation: "automatic"
+    weight: 0.9

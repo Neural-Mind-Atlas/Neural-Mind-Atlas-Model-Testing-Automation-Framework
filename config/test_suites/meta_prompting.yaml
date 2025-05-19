@@ -1,0 +1,51 @@
+# Meta-Prompting Test Suite Configuration
+
+name: "Meta-Prompting"
+description: "Tests for ability to create effective prompts for other systems"
+weight: 1.0
+
+test_cases:
+  - id: prompt_engineering
+    name: "Prompt Engineering"
+    description: "Tests ability to craft effective prompts for specific tasks"
+    prompts_file: "data/prompts/meta_prompting/engineering.yaml"
+    examples_count: 5
+    evaluation:
+      method: "prompt_quality"
+      metrics: ["clarity", "specificity", "effectiveness"]
+    weight: 0.25
+
+  - id: chain_of_thought
+    name: "Chain of Thought"
+    description: "Tests ability to create prompts that induce step-by-step thinking"
+    prompts_file: "data/prompts/meta_prompting/chain_of_thought.yaml"
+    examples_count: 5
+    evaluation:
+      method: "prompt_quality"
+      metrics: ["reasoning_induction", "clarity", "effectiveness"]
+    weight: 0.25
+
+  - id: specialized_task_prompts
+    name: "Specialized Task Prompts"
+    description: "Tests ability to create prompts for specialized tasks"
+    prompts_file: "data/prompts/meta_prompting/specialized.yaml"
+    examples_count: 5
+    evaluation:
+      method: "prompt_quality"
+      metrics: ["task_alignment", "clarity", "effectiveness"]
+    weight: 0.25
+
+  - id: prompt_iteration
+    name: "Prompt Iteration"
+    description: "Tests ability to refine prompts based on results"
+    prompts_file: "data/prompts/meta_prompting/iteration.yaml"
+    examples_count: 5
+    evaluation:
+      method: "prompt_quality"
+      metrics: ["improvement", "issue_identification", "refinement_quality"]
+    weight: 0.25
+
+settings:
+  temperature: 0.5  # Moderate temperature for meta-prompting
+  max_tokens: 4096
+  evaluation_model: "gpt_4o"  # Model to use for evaluating responses

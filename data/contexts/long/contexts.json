@@ -1,0 +1,13 @@
+{
+  "contexts": [
+    {
+      "id": "long_context_1",
+      "title": "Comprehensive Guide to AI-Powered Presentation Systems",
+      "content": "[This would contain 10,000+ tokens of detailed information about AI presentation systems, technical architectures, market analysis, user requirements, implementation strategies, case studies, and future directions. The content would span multiple sections covering everything from fundamental concepts to advanced applications.]\n\nSample sections would include:\n\n1. Introduction to AI in Presentation Creation\n2. Evolution of Presentation Technologies\n3. Core AI Technologies Powering Modern Systems\n   3.1 Natural Language Processing\n   3.2 Computer Vision\n   3.3 Generative Models\n4. System Architecture and Components\n5. User Experience Design Considerations\n6. Implementation Challenges and Solutions\n7. Market Analysis and Competitive Landscape\n8. Case Studies and Success Stories\n9. Future Directions and Research Opportunities\n10. Ethical Considerations and Best Practices\n\nEach section would contain detailed explanations, technical specifications, supporting data, expert opinions, and real-world examples.",
+      "metadata": {
+        "tokens": 10500,
+        "domain": "technology"
+      }
+    }
+  ]
+}

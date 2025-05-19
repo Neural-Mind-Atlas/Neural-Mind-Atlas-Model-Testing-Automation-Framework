@@ -1,0 +1,34 @@
+{
+  "test_cases": [
+    {
+      "id": "ppt_structure_1",
+      "category": "slide_structure",
+      "prompt_id": "slide_structure_basic",
+      "variables": {
+        "topic": "Implementing Artificial Intelligence in Healthcare: Opportunities and Challenges",
+        "audience": "Hospital administrators and healthcare IT directors",
+        "duration": "30"
+      },
+      "evaluation_criteria": {
+        "structure": "Should contain clear introduction, body sections covering both opportunities and challenges, and conclusion",
+        "content_relevance": "Should address practical implementation concerns relevant to hospital administration",
+        "slide_count": "Appropriate for 30-minute presentation (typically 15-20 slides)"
+      }
+    },
+    {
+      "id": "ppt_bullets_1",
+      "category": "bullet_points",
+      "prompt_id": "bullet_points_creation",
+      "variables": {
+        "slide_title": "Key Benefits of AI in Clinical Settings",
+        "context": "Part of a presentation on healthcare AI implementation, focusing on tangible benefits that justify investment"
+      },
+      "evaluation_criteria": {
+        "clarity": "Each bullet point should be clear and understandable",
+        "conciseness": "Each bullet should be 1-2 lines maximum",
+        "persuasiveness": "Points should highlight compelling benefits",
+        "specificity": "Points should be specific rather than generic"
+      }
+    }
+  ]
+}

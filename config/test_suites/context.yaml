@@ -1,0 +1,55 @@
+# Context Utilization Test Suite Configuration
+
+name: "Context Utilization"
+description: "Tests for ability to utilize context of varying lengths"
+weight: 1.0
+
+test_cases:
+  - id: short_context
+    name: "Short Context"
+    description: "Tests ability to utilize short contexts (<50 tokens)"
+    prompts_file: "data/prompts/context/short.yaml"
+    context_file: "data/contexts/short/contexts.json"
+    examples_count: 10
+    evaluation:
+      method: "context_utilization"
+      metrics: ["relevance", "accuracy", "completeness"]
+    weight: 0.25
+
+  - id: medium_context
+    name: "Medium Context"
+    description: "Tests ability to utilize medium contexts (500-2000 tokens)"
+    prompts_file: "data/prompts/context/medium.yaml"
+    context_file: "data/contexts/medium/contexts.json"
+    examples_count: 10
+    evaluation:
+      method: "context_utilization"
+      metrics: ["relevance", "accuracy", "completeness"]
+    weight: 0.25
+
+  - id: long_context
+    name: "Long Context"
+    description: "Tests ability to utilize long contexts (10K+ tokens)"
+    prompts_file: "data/prompts/context/long.yaml"
+    context_file: "data/contexts/long/contexts.json"
+    examples_count: 10
+    evaluation:
+      method: "context_utilization"
+      metrics: ["relevance", "accuracy", "completeness"]
+    weight: 0.25
+
+  - id: multi_document_context
+    name: "Multi-Document Context"
+    description: "Tests ability to synthesize information across multiple documents"
+    prompts_file: "data/prompts/context/multi_document.yaml"
+    context_file: "data/contexts/multi_document/contexts.json"
+    examples_count: 10
+    evaluation:
+      method: "context_utilization"
+      metrics: ["synthesis", "accuracy", "completeness"]
+    weight: 0.25
+
+settings:
+  temperature: 0.3  # Lower temperature for context tasks
+  max_tokens: 4096
+  evaluation_model: "gpt_4o"  # Model to use for evaluating responses

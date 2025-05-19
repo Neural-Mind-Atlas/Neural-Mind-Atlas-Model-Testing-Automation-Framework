@@ -1,0 +1,51 @@
+# Creative Writing Test Suite Configuration
+
+name: "Creative Writing"
+description: "Tests for creative content generation capabilities"
+weight: 1.0
+
+test_cases:
+  - id: narrative_generation
+    name: "Narrative Generation"
+    description: "Tests ability to generate coherent stories and narratives"
+    prompts_file: "data/prompts/creative/narrative.yaml"
+    examples_count: 5
+    evaluation:
+      method: "creative_quality"
+      metrics: ["coherence", "originality", "engagement"]
+    weight: 0.25
+
+  - id: style_adaptation
+    name: "Style Adaptation"
+    description: "Tests ability to write in specified styles or voices"
+    prompts_file: "data/prompts/creative/style.yaml"
+    examples_count: 5
+    evaluation:
+      method: "creative_quality"
+      metrics: ["style_match", "consistency", "quality"]
+    weight: 0.25
+
+  - id: content_transformation
+    name: "Content Transformation"
+    description: "Tests ability to transform content between formats"
+    prompts_file: "data/prompts/creative/transformation.yaml"
+    examples_count: 5
+    evaluation:
+      method: "creative_quality"
+      metrics: ["accuracy", "creativity", "format_adherence"]
+    weight: 0.25
+
+  - id: presentation_copy
+    name: "Presentation Copy"
+    description: "Tests ability to write engaging presentation content"
+    prompts_file: "data/prompts/creative/presentation.yaml"
+    examples_count: 5
+    evaluation:
+      method: "creative_quality"
+      metrics: ["clarity", "engagement", "conciseness"]
+    weight: 0.25
+
+settings:
+  temperature: 0.7  # Higher temperature for creative tasks
+  max_tokens: 4096
+  evaluation_model: "gpt_4o"  # Model to use for evaluating responses

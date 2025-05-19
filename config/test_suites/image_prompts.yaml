@@ -1,0 +1,51 @@
+# Image Generation Prompt Test Suite Configuration
+
+name: "Image Generation Prompts"
+description: "Tests for ability to create effective prompts for image generation models"
+weight: 1.0
+
+test_cases:
+  - id: style_specification
+    name: "Style Specification"
+    description: "Tests ability to specify artistic styles clearly"
+    prompts_file: "data/prompts/image_prompts/style.yaml"
+    examples_count: 5
+    evaluation:
+      method: "image_prompt_quality"
+      metrics: ["clarity", "specificity", "consistency"]
+    weight: 0.25
+
+  - id: composition_guidance
+    name: "Composition Guidance"
+    description: "Tests ability to describe image composition effectively"
+    prompts_file: "data/prompts/image_prompts/composition.yaml"
+    examples_count: 5
+    evaluation:
+      method: "image_prompt_quality"
+      metrics: ["spatial_clarity", "element_description", "relationship_clarity"]
+    weight: 0.25
+
+  - id: subject_description
+    name: "Subject Description"
+    description: "Tests ability to describe image subjects in detail"
+    prompts_file: "data/prompts/image_prompts/subject.yaml"
+    examples_count: 5
+    evaluation:
+      method: "image_prompt_quality"
+      metrics: ["descriptiveness", "specificity", "coherence"]
+    weight: 0.25
+
+  - id: slide_visuals
+    name: "Slide Visuals"
+    description: "Tests ability to create prompts for presentation-appropriate visuals"
+    prompts_file: "data/prompts/image_prompts/slide_visuals.yaml"
+    examples_count: 5
+    evaluation:
+      method: "image_prompt_quality"
+      metrics: ["presentation_appropriateness", "concept_alignment", "clarity"]
+    weight: 0.25
+
+settings:
+  temperature: 0.6  # Moderate temperature for creative but controlled output
+  max_tokens: 2048
+  evaluation_model: "gpt_4o"  # Model to use for evaluating responses

@@ -1,0 +1,45 @@
+prompts:
+  - id: "slide_structure_basic"
+    template: |
+      Create a well-structured slide deck outline for a presentation on the following topic:
+
+      {{topic}}
+
+      Target audience: {{audience}}
+      Presentation duration: {{duration}} minutes
+
+      For each slide, provide:
+      1. A clear, concise title
+      2. Bullet points for key content (3-5 points per slide)
+      3. A brief note on any visual elements that should be included
+
+      The presentation should have a clear introduction, body, and conclusion.
+    examples:
+      - variables:
+          topic: "Introducing Our New AI-Powered Product Suite"
+          audience: "C-level executives from potential client companies"
+          duration: "20"
+        expected_response_type: "slide_structure_outline"
+
+  - id: "slide_structure_technical"
+    template: |
+      Create a structured presentation outline for a technical talk on:
+
+      {{technical_topic}}
+
+      The audience consists of {{audience}} and the presentation should last approximately {{duration}} minutes.
+
+      Your outline should include:
+      1. An engaging introduction that establishes the importance of the topic
+      2. A logical sequence of slides that builds understanding progressively
+      3. Technical details appropriate for the audience's expertise level
+      4. Practical applications or implications of the technical content
+      5. A conclusion that reinforces key takeaways
+
+      For each slide, provide a title and brief content description.
+    examples:
+      - variables:
+          technical_topic: "Implementing Transformer Architecture for Document Analysis"
+          audience: "software engineers with basic machine learning knowledge"
+          duration: "45"
+        expected_response_type: "technical_slide_structure"

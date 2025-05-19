@@ -1,0 +1,51 @@
+# Hallucination Detection Test Suite Configuration
+
+name: "Hallucination Detection"
+description: "Tests for detecting and mitigating hallucinations"
+weight: 1.0
+
+test_cases:
+  - id: factoid_hallucination
+    name: "Factoid Hallucination"
+    description: "Tests tendency to hallucinate facts about specific entities"
+    prompts_file: "data/prompts/hallucination/factoid.yaml"
+    examples_count: 10
+    evaluation:
+      method: "hallucination_score"
+      metrics: ["factual_accuracy", "admission_of_uncertainty"]
+    weight: 0.25
+
+  - id: ambiguous_questions
+    name: "Ambiguous Questions"
+    description: "Tests handling of ambiguous or unanswerable questions"
+    prompts_file: "data/prompts/hallucination/ambiguous.yaml"
+    examples_count: 10
+    evaluation:
+      method: "hallucination_score"
+      metrics: ["uncertainty_handling", "clarification_attempts"]
+    weight: 0.25
+
+  - id: invented_concepts
+    name: "Invented Concepts"
+    description: "Tests tendency to invent non-existent concepts or entities"
+    prompts_file: "data/prompts/hallucination/invented_concepts.yaml"
+    examples_count: 10
+    evaluation:
+      method: "hallucination_score"
+      metrics: ["factual_accuracy", "admission_of_uncertainty"]
+    weight: 0.25
+
+  - id: misleading_prompts
+    name: "Misleading Prompts"
+    description: "Tests resistance to prompts with false premises"
+    prompts_file: "data/prompts/hallucination/misleading.yaml"
+    examples_count: 10
+    evaluation:
+      method: "hallucination_score"
+      metrics: ["premise_correction", "factual_accuracy"]
+    weight: 0.25
+
+settings:
+  temperature: 0.7  # Default temperature
+  max_tokens: 2048
+  evaluation_model: "gpt_4o"  # Model to use for evaluating responses

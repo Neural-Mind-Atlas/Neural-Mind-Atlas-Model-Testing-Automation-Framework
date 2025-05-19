@@ -1,0 +1,49 @@
+{
+  "contexts": [
+    {
+      "id": "short_context_1",
+      "title": "Project Overview",
+      "content": "The Agentic AI project aims to develop an intelligent presentation creation system that can autonomously generate content based on user requirements.",
+      "metadata": {
+        "tokens": 23,
+        "domain": "business"
+      }
+    },
+    {
+      "id": "short_context_2",
+      "title": "AI Definition",
+      "content": "Artificial Intelligence refers to systems that can perform tasks requiring human intelligence, such as visual perception, speech recognition, and decision-making.",
+      "metadata": {
+        "tokens": 26,
+        "domain": "technology"
+      }
+    },
+    {
+      "id": "short_context_3",
+      "title": "Company Mission",
+      "content": "Our mission is to democratize access to high-quality presentations through AI-powered tools that make professional content creation available to everyone.",
+      "metadata": {
+        "tokens": 24,
+        "domain": "business"
+      }
+    },
+    {
+      "id": "short_context_4",
+      "title": "Market Trend",
+      "content": "The global AI market is expected to grow at a CAGR of 37.3% from 2023 to 2030, reaching $1.8 trillion by the end of the forecast period.",
+      "metadata": {
+        "tokens": 31,
+        "domain": "finance"
+      }
+    },
+    {
+      "id": "short_context_5",
+      "title": "Customer Pain Point",
+      "content": "Many professionals spend 5-10 hours per week creating presentations, with 68% reporting that they feel their time could be better spent on more strategic tasks.",
+      "metadata": {
+        "tokens": 30,
+        "domain": "business"
+      }
+    }
+  ]
+}

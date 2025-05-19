@@ -1,0 +1,37 @@
+{
+  "test_cases": [
+    {
+      "id": "context_short_1",
+      "category": "short_context",
+      "context_id": "short_context_1",
+      "prompt_template": "Based solely on the information provided in the context, what is the primary goal of the Agentic AI project?",
+      "evaluation_criteria": {
+        "relevance": "Answer should directly address the primary goal mentioned in the context",
+        "accuracy": "Answer should accurately reflect the information in the context without additions",
+        "conciseness": "Answer should be concise and to the point"
+      }
+    },
+    {
+      "id": "context_medium_1",
+      "category": "medium_context",
+      "context_id": "medium_context_1",
+      "prompt_template": "Based on the provided context, summarize the key advantages and challenges of using AI in content creation.",
+      "evaluation_criteria": {
+        "comprehensiveness": "Answer should cover both advantages and challenges mentioned in the context",
+        "accuracy": "Answer should accurately reflect the information without distortion",
+        "organization": "Answer should be well-organized, clearly separating advantages and challenges"
+      }
+    },
+    {
+      "id": "context_long_1",
+      "category": "long_context",
+      "context_id": "long_context_1",
+      "prompt_template": "Based on the comprehensive guide provided, create a 5-slide executive summary that highlights the most important aspects of AI-powered presentation systems for a CEO considering implementation.",
+      "evaluation_criteria": {
+        "information_selection": "Should identify and prioritize the most relevant information for an executive audience",
+        "comprehensiveness": "Should cover key aspects from different sections of the guide",
+        "conciseness": "Should distill complex information effectively for an executive summary"
+      }
+    }
+  ]
+}

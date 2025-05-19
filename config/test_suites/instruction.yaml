@@ -1,0 +1,51 @@
+# Instruction Following Test Suite Configuration
+
+name: "Instruction Following"
+description: "Tests for ability to follow instructions accurately"
+weight: 1.0
+
+test_cases:
+  - id: simple_instructions
+    name: "Simple Instructions"
+    description: "Tests ability to follow basic, single-step instructions"
+    prompts_file: "data/prompts/instruction/simple.yaml"
+    examples_count: 10
+    evaluation:
+      method: "instruction_compliance"
+      metrics: ["compliance_rate", "accuracy"]
+    weight: 0.2
+
+  - id: complex_instructions
+    name: "Complex Instructions"
+    description: "Tests ability to follow multi-step, complex instructions"
+    prompts_file: "data/prompts/instruction/complex.yaml"
+    examples_count: 10
+    evaluation:
+      method: "instruction_compliance"
+      metrics: ["compliance_rate", "step_completion", "accuracy"]
+    weight: 0.3
+
+  - id: contradictory_instructions
+    name: "Contradictory Instructions"
+    description: "Tests handling of contradictory or unclear instructions"
+    prompts_file: "data/prompts/instruction/contradictory.yaml"
+    examples_count: 10
+    evaluation:
+      method: "instruction_compliance"
+      metrics: ["clarification_attempts", "resolution_quality"]
+    weight: 0.25
+
+  - id: format_adherence
+    name: "Format Adherence"
+    description: "Tests ability to adhere to specified output formats"
+    prompts_file: "data/prompts/instruction/format.yaml"
+    examples_count: 10
+    evaluation:
+      method: "instruction_compliance"
+      metrics: ["format_adherence", "content_quality"]
+    weight: 0.25
+
+settings:
+  temperature: 0.3  # Lower temperature for instruction following
+  max_tokens: 2048
+  evaluation_model: "gpt_4o"  # Model to use for evaluating responses

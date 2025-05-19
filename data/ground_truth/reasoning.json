@@ -1,0 +1,24 @@
+{
+  "logical_deduction": [
+    {
+      "id": "logical_1",
+      "question": "If all A are B, and all B are C, what can we conclude?",
+      "answer": "All A are C",
+      "explanation": "This is a classic syllogism. If every member of set A is also a member of set B, and every member of set B is also a member of set C, then it follows that every member of set A must also be a member of set C."
+    },
+    {
+      "id": "logical_2",
+      "question": "If no A are B, and some C are B, what can we conclude?",
+      "answer": "Some C are not A",
+      "explanation": "Since no A are B, but some C are B, those C that are B cannot be A. Therefore, some C are not A."
+    }
+  ],
+  "mathematical_problem_solving": [
+    {
+      "id": "math_1",
+      "question": "A company's revenue grew by 10% in 2022 and by 15% in 2023. What was the total percentage growth over the two years?",
+      "answer": "26.5%",
+      "explanation": "If we start with revenue R, after the first year it becomes R × 1.10. After the second year, it becomes R × 1.10 × 1.15 = R × 1.265. This represents a 26.5% increase from the original value."
+    }
+  ]
+}

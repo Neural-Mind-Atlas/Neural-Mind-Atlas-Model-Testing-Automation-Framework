@@ -1,0 +1,48 @@
+# Evaluation Weights Configuration
+
+# Test suite weights for overall scoring
+test_suite_weights:
+  reasoning: 1.0
+  factual: 1.0
+  hallucination: 1.0
+  instruction: 1.0
+  context: 1.0
+  creative: 0.8
+  code: 0.7
+  ppt_writing: 1.2  # Higher weight for PPT generation
+  meta_prompting: 1.0
+  image_prompts: 0.9
+
+# Special weights for PPT generation use case
+ppt_generation_weights:
+  reasoning: 0.8
+  factual: 1.0
+  hallucination: 1.2  # Important to avoid hallucinations in presentations
+  instruction: 1.0
+  context: 1.2  # Important for using reference materials
+  creative: 0.9
+  code: 0.5
+  ppt_writing: 1.5  # Most important for this use case
+  meta_prompting: 0.8
+  image_prompts: 1.2  # Important for visual elements
+
+# Priority weights for different evaluation aspects
+evaluation_aspect_weights:
+  quality: 1.0
+  speed: 0.7
+  efficiency: 0.8
+  cost: 0.9
+
+# Dimension weights for detailed analysis
+dimension_weights:
+  accuracy: 1.0
+  creativity: 0.8
+  reliability: 1.0
+  efficiency: 0.9
+  cost_effectiveness: 0.8
+
+# Context length specific weights
+context_length_weights:
+  short_context: 0.8
+  medium_context: 1.0
+  long_context: 1.2  # Higher weight for long context handling

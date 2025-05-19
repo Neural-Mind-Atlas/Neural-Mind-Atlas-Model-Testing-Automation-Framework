@@ -1,0 +1,37 @@
+{
+  "test_cases": [
+    {
+      "id": "image_prompt_slide_1",
+      "category": "slide_visuals",
+      "prompt_id": "slide_visual_concept",
+      "variables": {
+        "slide_title": "The AI Revolution in Business Operations",
+        "slide_content": "Overview of how AI is transforming core business processes: customer service, supply chain management, and decision making",
+        "theme": "Technology Transformation for Business Leaders",
+        "audience": "C-suite executives from Fortune 500 companies"
+      },
+      "evaluation_criteria": {
+        "clarity": "Image prompt should clearly describe what the image should depict",
+        "relevance": "Image concept should directly relate to the slide content",
+        "professionalism": "Image concept should be appropriate for executive audience",
+        "specificity": "Prompt should include specific visual elements and style direction"
+      }
+    },
+    {
+      "id": "image_prompt_style_1",
+      "category": "style_specification",
+      "prompt_id": "style_specification",
+      "variables": {
+        "concept": "Data visualization showing increasing adoption of AI across industries",
+        "presentation_context": "Professional presentation to potential investors",
+        "brand_guidelines": "Modern, minimalist aesthetic with blue and teal as primary colors"
+      },
+      "evaluation_criteria": {
+        "style_clarity": "Clear specification of visual style",
+        "brand_alignment": "Adherence to provided brand guidelines",
+        "professional_quality": "Suitable for investor presentation context",
+        "technical_feasibility": "Prompt that would work well with image generation systems"
+      }
+    }
+  ]
+}

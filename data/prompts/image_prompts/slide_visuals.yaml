@@ -1,0 +1,29 @@
+prompts:
+  - id: "slide_visual_concept"
+    template: |
+      Create an effective image generation prompt for a visual to accompany a presentation slide with the following details:
+
+      Slide title: {{slide_title}}
+      Slide content: {{slide_content}}
+      Presentation theme: {{theme}}
+      Target audience: {{audience}}
+
+      The image should:
+      - Clearly convey the main concept of the slide
+      - Match the overall presentation style and tone
+      - Be appropriate for a professional context
+      - Be visually engaging while not distracting from content
+
+      Your image generation prompt should specify:
+      1. The main subject/composition
+      2. Style and artistic direction
+      3. Color palette
+      4. Mood/atmosphere
+      5. Level of detail/complexity appropriate for a presentation
+    examples:
+      - variables:
+          slide_title: "The Future of Remote Work"
+          slide_content: "Key statistics on remote work adoption, productivity impacts, and technology enablers"
+          theme: "Digital Transformation in the Post-Pandemic Era"
+          audience: "Human Resources executives"
+        expected_response_type: "image_generation_prompt"

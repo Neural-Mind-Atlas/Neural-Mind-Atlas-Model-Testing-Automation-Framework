@@ -1,0 +1,24 @@
+{
+  "general_knowledge": [
+    {
+      "id": "general_1",
+      "question": "What is the capital of Japan?",
+      "answer": "Tokyo",
+      "explanation": "Tokyo is the capital and largest city of Japan, serving as the country's political, economic, and cultural center."
+    },
+    {
+      "id": "general_2",
+      "question": "Who wrote 'Pride and Prejudice'?",
+      "answer": "Jane Austen",
+      "explanation": "Pride and Prejudice is a novel by Jane Austen, first published in 1813. It is one of the most popular novels in English literature."
+    }
+  ],
+  "domain_specific_knowledge": [
+    {
+      "id": "domain_1",
+      "question": "What is the difference between supervised and unsupervised learning in machine learning?",
+      "answer": "Supervised learning uses labeled data with known outputs while unsupervised learning works with unlabeled data and identifies patterns without predetermined outputs.",
+      "explanation": "In supervised learning, algorithms learn from labeled training data to predict outputs for unseen data. Unsupervised learning identifies hidden patterns or intrinsic structures in input data without labeled responses."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+# Factual Accuracy Test Suite Configuration
+
+name: "Factual Accuracy"
+description: "Tests for factual knowledge and accuracy"
+weight: 1.0
+
+test_cases:
+  - id: general_knowledge
+    name: "General Knowledge"
+    description: "Tests breadth of general factual knowledge"
+    prompts_file: "data/prompts/factual/general_knowledge.yaml"
+    examples_count: 15
+    evaluation:
+      method: "accuracy"
+      metrics: ["correctness", "completeness"]
+    weight: 0.25
+
+  - id: domain_specific_knowledge
+    name: "Domain-Specific Knowledge"
+    description: "Tests knowledge in specific domains (science, history, etc.)"
+    prompts_file: "data/prompts/factual/domain_specific.yaml"
+    examples_count: 15
+    evaluation:
+      method: "accuracy"
+      metrics: ["correctness", "completeness", "detail_level"]
+    weight: 0.25
+
+  - id: temporal_knowledge
+    name: "Temporal Knowledge"
+    description: "Tests knowledge of time-dependent facts and their relationships"
+    prompts_file: "data/prompts/factual/temporal.yaml"
+    examples_count: 10
+    evaluation:
+      method: "accuracy"
+      metrics: ["correctness", "temporal_awareness"]
+    weight: 0.25
+
+  - id: numerical_facts
+    name: "Numerical Facts"
+    description: "Tests knowledge of numerical facts and statistics"
+    prompts_file: "data/prompts/factual/numerical.yaml"
+    examples_count: 10
+    evaluation:
+      method: "accuracy"
+      metrics: ["correctness", "precision"]
+    weight: 0.25
+
+settings:
+  temperature: 0.1  # Lower temperature for factual tasks
+  max_tokens: 1024
+  evaluation_model: "gpt_4o"  # Model to use for evaluating responses

@@ -1,0 +1,47 @@
+# Python dependencies 
+# Core dependencies
+pyyaml
+python-dotenv
+tqdm
+tenacity
+numpy
+pandas
+
+# API clients
+anthropic
+openai
+google-generativeai
+mistralai
+# cohere-api==4.32
+torch  # For Llama and other local models
+
+# Tokenizers
+tiktoken
+transformers
+sentencepiece
+
+# Evaluation metrics
+rouge-score
+nltk
+bert-score
+sacrebleu
+
+# Visualization and reporting
+matplotlib
+seaborn
+plotly
+pydantic
+tabulate
+PyYAML
+
+# Testing
+pytest
+pytest-cov
+
+# Utilities
+retry
+backoff
+aiohttp
+httpx
+async-timeout
+aiometer

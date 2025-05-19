@@ -1,0 +1,90 @@
+# Evaluation Reporting Configuration
+
+# Basic report configuration
+report:
+  format: "yaml"  # Primary output format
+  additional_formats: ["json", "csv"]
+  include_raw_responses: true
+  include_scores: true
+  include_statistics: true
+
+# Detailed model comparison report
+model_comparison:
+  generate: true
+  format: "yaml"
+  metrics_to_include:
+    - "overall_score"
+    - "reasoning_score"
+    - "factual_score"
+    - "hallucination_score"
+    - "instruction_score"
+    - "context_score"
+    - "creative_score"
+    - "code_score"
+    - "ppt_writing_score"
+    - "meta_prompting_score"
+    - "image_prompts_score"
+    - "tokens_per_request"
+    - "cost_per_1k_tokens"
+    - "cost_per_quality_point"
+    - "average_response_time"
+
+# Visualizations configuration
+visualizations:
+  generate: true
+  formats: ["png", "pdf"]
+  types:
+    - "radar_chart"  # Model comparison across dimensions
+    - "bar_chart"    # Test suite performance
+    - "scatter_plot" # Cost vs. performance
+    - "heatmap"      # Detailed metric comparison
+
+# Recommendation engine configuration
+recommendations:
+  generate: true
+  scenarios:
+    - name: "best_overall"
+      description: "Best overall performer"
+      
+    - name: "most_cost_effective"
+      description: "Most cost-effective model"
+      weights:
+        quality: 1.0
+        cost: 2.0
+        
+    - name: "best_for_ppt"
+      description: "Best model for PPT generation"
+      weights:
+        ppt_writing: 2.0
+        context: 1.2
+        hallucination: 1.2
+        
+    - name: "fastest"
+      description: "Fastest model with acceptable quality"
+      weights:
+        quality: 1.0
+        speed: 2.0
+        
+    - name: "best_reasoning"
+      description: "Best model for complex reasoning"
+      weights:
+        reasoning: 2.0
+        factual: 1.2
+
+# YAML output configuration
+yaml_output:
+  indent: 2
+  sort_keys: false
+  include_metadata: true
+  metadata:
+    - "test_date"
+    - "framework_version"
+    - "test_duration"
+    - "model_versions"
+
+# Failure analysis
+failure_analysis:
+  generate: true
+  categorize_failures: true
+  include_examples: true
+  max_examples_per_category: 3

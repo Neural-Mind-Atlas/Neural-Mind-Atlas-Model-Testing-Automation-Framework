@@ -1,0 +1,61 @@
+# PPT Writing Test Suite Configuration
+
+name: "PPT Writing"
+description: "Tests for PowerPoint content generation capabilities"
+weight: 1.0
+
+test_cases:
+  - id: slide_structure
+    name: "Slide Structure"
+    description: "Tests ability to create well-structured slide content"
+    prompts_file: "data/prompts/ppt_writing/structure.yaml"
+    examples_count: 5
+    evaluation:
+      method: "ppt_quality"
+      metrics: ["structure", "flow", "completeness"]
+    weight: 0.2
+
+  - id: bullet_points
+    name: "Bullet Points"
+    description: "Tests ability to create concise, effective bullet points"
+    prompts_file: "data/prompts/ppt_writing/bullets.yaml"
+    examples_count: 5
+    evaluation:
+      method: "ppt_quality"
+      metrics: ["clarity", "conciseness", "impact"]
+    weight: 0.2
+
+  - id: presentation_narrative
+    name: "Presentation Narrative"
+    description: "Tests ability to create a cohesive story arc across slides"
+    prompts_file: "data/prompts/ppt_writing/narrative.yaml"
+    examples_count: 5
+    evaluation:
+      method: "ppt_quality"
+      metrics: ["narrative_flow", "coherence", "engagement"]
+    weight: 0.2
+
+  - id: technical_content
+    name: "Technical Content"
+    description: "Tests ability to present technical information effectively"
+    prompts_file: "data/prompts/ppt_writing/technical.yaml"
+    examples_count: 5
+    evaluation:
+      method: "ppt_quality"
+      metrics: ["accuracy", "clarity", "appropriate_level"]
+    weight: 0.2
+
+  - id: speaker_notes
+    name: "Speaker Notes"
+    description: "Tests ability to create helpful speaker notes"
+    prompts_file: "data/prompts/ppt_writing/speaker_notes.yaml"
+    examples_count: 5
+    evaluation:
+      method: "ppt_quality"
+      metrics: ["helpfulness", "completeness", "alignment"]
+    weight: 0.2
+
+settings:
+  temperature: 0.4  # Moderate temperature for presentation tasks
+  max_tokens: 4096
+  evaluation_model: "gpt_4o"  # Model to use for evaluating responses

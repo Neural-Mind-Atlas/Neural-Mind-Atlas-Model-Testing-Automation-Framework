@@ -1,0 +1,110 @@
+# Other Models Configuration
+
+models:
+  # - name: dbrx
+  #   display_name: "Databricks DBRX"
+  #   version: "databricks/dbrx-instruct"
+  #   api_key_env: "DATABRICKS_API_KEY"
+  #   max_tokens: 32000
+  #   context_window: 32000
+  #   strengths:
+  #     - "Data science specialization"
+  #     - "Code generation"
+  #     - "Technical content"
+  #   defaults:
+  #     temperature: 0.7
+  #     top_p: 0.95
+  #     max_tokens: 4096
+  #   cost:
+  #     input_per_1k: 0.5
+  #     output_per_1k: 1.5
+
+  # - name: qwen_2_5_72b
+  #   display_name: "Qwen 2.5 72B"
+  #   version: "qwen/qwen2.5-72b-instruct"
+  #   api_key_env: "QWEN_API_KEY"
+  #   max_tokens: 32768
+  #   context_window: 32768
+  #   strengths:
+  #     - "Large parameter count"
+  #     - "Diverse training data"
+  #     - "Multilingual capabilities"
+  #   defaults:
+  #     temperature: 0.7
+  #     top_p: 0.9
+  #     max_tokens: 4096
+  #   cost:
+  #     input_per_1k: 1.5
+  #     output_per_1k: 4.5
+
+  # - name: falcon_2_40b
+  #   display_name: "Falcon 2 40B"
+  #   version: "tiiuae/falcon-2-40b-instruct"
+  #   api_key_env: "FALCON_API_KEY"
+  #   max_tokens: 8192
+  #   context_window: 8192
+  #   strengths:
+  #     - "Efficiency"
+  #     - "Research backing"
+  #     - "Open architecture"
+  #   defaults:
+  #     temperature: 0.7
+  #     top_p: 0.9
+  #     max_tokens: 2048
+  #   cost:
+  #     input_per_1k: 0.7
+  #     output_per_1k: 2.1
+
+  - name: cohere_command_r_plus
+    display_name: "Cohere Command R+"
+    version: "command-r-plus"
+    api_key_env: "COHERE_API_KEY"
+    max_tokens: 128000
+    context_window: 128000
+    strengths:
+      - "Enterprise focus"
+      - "Citation capabilities"
+      - "Hallucination reduction"
+    defaults:
+      temperature: 0.7
+      top_p: 0.9
+      max_tokens: 4096
+    cost:
+      input_per_1k: 3.0
+      output_per_1k: 15.0
+
+  - name: cohere_command_a
+    display_name: "Cohere Command A"
+    version: "command-a"
+    api_key_env: "COHERE_API_KEY"
+    max_tokens: 128000
+    context_window: 128000
+    strengths:
+      - "Enterprise focus"
+      - "Agent-oriented"
+      - "Task automation"
+    defaults:
+      temperature: 0.7
+      top_p: 0.9
+      max_tokens: 4096
+    cost:
+      input_per_1k: 3.0
+      output_per_1k: 15.0
+
+  - name: cohere_command_r
+    display_name: "Cohere Command R"
+    version: "command-r"
+    api_key_env: "COHERE_API_KEY"
+    max_tokens: 128000
+    context_window: 128000
+    strengths:
+      - "Enterprise focus"
+      - "Research capabilities"
+      - "Knowledge retrieval"
+    defaults:
+      temperature: 0.7
+      top_p: 0.9
+      max_tokens: 4096
+    cost:
+      input_per_1k: 1.0
+      output_per_1k: 5.0

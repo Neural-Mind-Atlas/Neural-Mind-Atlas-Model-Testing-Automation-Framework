@@ -1,0 +1,51 @@
+# Code Generation Test Suite Configuration
+
+name: "Code Generation"
+description: "Tests for code generation capabilities"
+weight: 1.0
+
+test_cases:
+  - id: algorithm_implementation
+    name: "Algorithm Implementation"
+    description: "Tests ability to implement specified algorithms"
+    prompts_file: "data/prompts/code/algorithm.yaml"
+    examples_count: 5
+    evaluation:
+      method: "code_quality"
+      metrics: ["correctness", "efficiency", "readability"]
+    weight: 0.25
+
+  - id: bug_fixing
+    name: "Bug Fixing"
+    description: "Tests ability to identify and fix bugs in code"
+    prompts_file: "data/prompts/code/bugs.yaml"
+    examples_count: 5
+    evaluation:
+      method: "code_quality"
+      metrics: ["bug_detection", "fix_correctness", "explanation"]
+    weight: 0.25
+
+  - id: language_conversion
+    name: "Language Conversion"
+    description: "Tests ability to convert code between programming languages"
+    prompts_file: "data/prompts/code/conversion.yaml"
+    examples_count: 5
+    evaluation:
+      method: "code_quality"
+      metrics: ["correctness", "idiomaticity", "completeness"]
+    weight: 0.25
+
+  - id: data_visualization
+    name: "Data Visualization"
+    description: "Tests ability to generate code for data visualization"
+    prompts_file: "data/prompts/code/visualization.yaml"
+    examples_count: 5
+    evaluation:
+      method: "code_quality"
+      metrics: ["correctness", "visual_quality", "code_quality"]
+    weight: 0.25
+
+settings:
+  temperature: 0.2  # Lower temperature for code generation
+  max_tokens: 4096
+  evaluation_model: "gpt_4o"  # Model to use for evaluating responses
